@@ -22,19 +22,32 @@ class StickyHero extends HTMLElement {
       this.children[0].style.setProperty("--gap", this.gap);
     }
 
+    this.animation = this.getAttribute("data-animation") || "fade-in";
+
     this.animateIn();
   }
 
   animateIn() {
-    console.log(
-      "select all the child elements with the data attribute of 'data-animate"
-    );
-    const elements = this.querySelectorAll("[data-animate]");
-
-    gsap.to(this.querySelectorAll("[data-animate]"), {
-      autoAlpha: 1,
-      stagger: 0.1,
-    });
+    if (this.animation === "fade-in") {
+      gsap.to(this.querySelectorAll("[data-animate]"), {
+        autoAlpha: 1,
+        ease: "power2.out",
+        stagger: {
+          each: 0.1,
+          from: "random",
+        },
+      });
+    } else {
+      gsap.from(this.querySelectorAll("[data-animate]"), {
+        autoAlpha: 0,
+        yPercent: 15,
+        ease: "power2.out",
+        stagger: {
+          each: 0.1,
+          from: "random",
+        },
+      });
+    }
   }
 
   disconnectedCallback() {

@@ -7,7 +7,7 @@ sticky-hero {
 }
 
 sticky-hero .sticky-hero__inner {
-  --columns: 3;
+  --columns: 5;
   --gap: 1;
   display: grid;
   height: 100%;
@@ -34,7 +34,7 @@ sticky-hero .sticky-hero__column span {
   visibility: hidden;
 }
 
-sticky-hero .sticky-hero__column:hover sup {
+sticky-hero .sticky-hero__column span:hover sup {
   opacity: 1;
 }
 

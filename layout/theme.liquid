@@ -35,6 +35,23 @@
 
     <link rel="stylesheet" href="{{ 'main.css' | asset_url }}">
 
+    {%  style  %} 
+
+      :root {
+        --font-primary-family: {{ settings.font_primary.family }}, {{ settings.font_primary.fallback_families }};
+        --font-primary-style: {{ settings.font_primary.style }};
+        --font-primary-weight: {{ settings.font_primary.weight }};
+        --font-primary-weight-bold: {{ settings.font_primary.weight | plus: 300 | at_most: 1000 }};
+
+         --font-secondary-family: {{ settings.font_secondary.family }}, {{ settings.font_secondary.fallback_families }};
+        --font-secondary-style: {{ settings.font_secondary.style }};
+        --font-secondary-weight: {{ settings.font_secondary.weight }};
+        --font-secondary-weight-bold: {{ settings.font_secondary.weight | plus: 300 | at_most: 1000 }};
+      }
+
+    {% endstyle %}
+
+  {{ "base.css" |  asset_url |  stylesheet_tag }}
 
   <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');

@@ -14,6 +14,8 @@ First of my Building & Learning in public series.
 
 - Designed the homepage layout (Designs and case study will be made available on Behance when the project is done).
 - Setup initial project structure on Github.
+- Added placeholders for Home, About, Collection, Gallery and Contact Pages
+- Setup dynamic fonts through theme settings
 
 ### Project Checklist
 

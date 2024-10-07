@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_primary",
+        // NOTE: For default fonts, use the font name then _n4
+        "default": "monaco_n4",
+        "label": "Primary Font",
+        "info": "The primary font used on the website"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_secondary",
+        "default": "monaco_n4",
+        "label": "Secondary Font",
+        "info": "The secondary font used on the website"
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "info": "The background color of the website",
+        "default": "#F7F6F3"
+      },
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary Color",
+        "info": "The primary color of the website",
+        "default": "#2D2D2D"
+      }
+    ]
+  }
+]

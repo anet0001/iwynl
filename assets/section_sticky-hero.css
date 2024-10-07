@@ -28,6 +28,7 @@ sticky-hero .sticky-hero__column {
 sticky-hero .sticky-hero__column span {
   display: block;
   position: sticky;
+  padding-top: calc(var(--r) * 2);
   top: 0;
   cursor: pointer;
 }

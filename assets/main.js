@@ -8,7 +8,9 @@ class App {
     window.scrollTo(0, 0);
     this.lenis = new Lenis({
       easing: (x) => {
-        return -(Math.cos(Math.PI * x) - 1) / 2;
+        return x < 0.5
+          ? (1 - Math.sqrt(1 - Math.pow(2 * x, 2))) / 2
+          : (Math.sqrt(1 - Math.pow(-2 * x + 2, 2)) + 1) / 2;
       },
     });
 

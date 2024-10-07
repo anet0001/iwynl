@@ -30,5 +30,6 @@ section-header .menu-toggle::after {
 
 section-header .menu-toggle sup {
   font-size: 0.75em;
+  text-transform: lowercase;
   vertical-align: top;
 }

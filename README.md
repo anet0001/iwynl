@@ -18,6 +18,7 @@ First of my Building & Learning in public series.
 - Setup dynamic fonts through theme settings
 - Added Sticky Hero Section
 - Added smooth scroll with lenis
+- Added Header (Toggle Section)
 
 ### Project Checklist
 

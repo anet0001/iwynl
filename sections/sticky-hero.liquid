@@ -4,7 +4,6 @@
 
 {% if section.blocks.size > 0 %}
   <sticky-hero>
-
     {% for block in section.blocks %}
       {% if block.type == "hero-text" %}
         {% assign column_size = block.settings.text | split: " " | size %}
@@ -46,6 +45,10 @@
     "name": "Sticky Hero",
     "class": "sticky-hero",
     "tag": "section",
+    "limit": 1,
+    "disabled_on": {
+      "groups": ["header"]
+    },
     "settings": [
       {
         "type": "select",
@@ -84,6 +87,7 @@
       {
         "name": "Abbreviation",
         "type": "hero-text",
+        "limit": 1,
         "settings": [
           {
             "type": "text",
@@ -110,8 +114,8 @@
     ],
     "presets": [
       {
-        "name": "Default",
-        "category": "Header"
+        "name": "Sticky Hero",
+        "category": "Page"
       }
     ]
   }

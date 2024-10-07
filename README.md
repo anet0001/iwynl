@@ -16,6 +16,8 @@ First of my Building & Learning in public series.
 - Setup initial project structure on Github.
 - Added placeholders for Home, About, Collection, Gallery and Contact Pages
 - Setup dynamic fonts through theme settings
+- Added Sticky Hero Section
+- Added smooth scroll with lenis
 
 ### Project Checklist
 

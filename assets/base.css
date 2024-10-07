@@ -12,6 +12,8 @@ body {
   font-family: var(--font-primary-family);
   font-style: var(--font-primary-style);
   font-weight: var(--font-primary-weight);
+  background-color: var(--color-background);
+  color: var(--color-primary);
 }
 
 html.lenis,

@@ -1,0 +1,53 @@
+{% comment %} WIS?: The navigation header component (section) {% endcomment %}
+
+{{ 'layout_header.css' | asset_url | stylesheet_tag }}
+
+{% if section.blocks.size > 0 %}
+  <section-header>
+    {% for block in section.blocks %}
+      {% if block.type == "menu-toggle" %}
+				{% assign toggle_text = block.settings.menu-toggle--closed | split: " " %}
+        <button class="menu-toggle"><span><sup>{{ toggle_text.first }}</sup>{{ toggle_text.last }}</span></button>
+      {% endif %}
+    {% endfor %}
+  </section-header>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Header",
+    "class": "section__header",
+    "limit": 1,
+    "settings": [],
+    "blocks": [
+      {
+        "type": "menu-toggle",
+        "limit": 1,
+        "name": "Menu Toggle",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Opened Menu Text",
+            "default": "Close Menu",
+            "info": "The text for the navigation menu (Opened)",
+            "id": "menu-toggle--open"
+          }, {
+            "type": "text",
+            "label": "Closed Menu Text",
+            "default": "Open Menu",
+            "info": "The text for the navigation menu (Closed)",
+            "id": "menu-toggle--closed"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Header",
+        "category": "Navigation",
+      }
+    ]
+  }
+{% endschema %}
+
+<script src="{{ 'section_header.js' | asset_url }}" defer></script>

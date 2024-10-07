@@ -1,0 +1,121 @@
+{% comment %} WIT?: A hero section with Abbreviated sticky text {% endcomment %}
+
+{{ 'section_sticky-hero.css' | asset_url | stylesheet_tag }}
+
+{% if section.blocks.size > 0 %}
+  <sticky-hero>
+
+    {% for block in section.blocks %}
+      {% if block.type == "hero-text" %}
+        {% assign column_size = block.settings.text | split: " " | size %}
+        <div
+          class="sticky-hero__inner {{ section.settings.font-scale }}"
+          data-block-id="hero-text"
+          {{ block.shopify_attributes }}
+          data-columns="{{column_size}}"
+          data-gap="{{ block.settings.gap }}">
+
+          {% assign text_parts = block.settings.text | split: ' ' %}
+          {% assign text_alignment = block.settings.alignment-pattern | split: '' %}
+          {% for part in text_parts %}
+            {% assign word = part | split: "" %}
+            {% assign remaining_chars = part %}
+
+            {% assign alignment = '' %}
+            {% case text_alignment[forloop.index0] %}
+              {% when '^' %}
+                {% assign alignment = 'align-top' %}
+              {% else %}
+                {% assign alignment = 'align-middle' %}
+            {% endcase %}
+            <div class="sticky-hero__column {{alignment}}">
+              <span>
+                {{ word[0] }}
+                <sup>{{ remaining_chars }}</sup>
+              </span>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </sticky-hero>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Sticky Hero",
+    "class": "sticky-hero",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "select",
+        "id": "font",
+        "label": "Font",
+        "default": "primary",
+        "info": "Font Family to be used",
+        "options": [
+          {
+            "label": "Primary",
+            "value": "primary"
+          }, {
+            "label": "Secondary",
+            "value": "secondary"
+          }
+        ]
+      }, {
+        "type": "select",
+        "id": "font-scale",
+        "label": "Font Size",
+        "options": [
+          {
+            "label": "M",
+            "value": "font-scale--medium"
+          }, {
+            "label": "L",
+            "value": "font-scale--large"
+          }, {
+            "label": "XL",
+            "value": "font-scale--xl"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Abbreviation",
+        "type": "hero-text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Hero Text"
+          }, {
+            "type": "text",
+            "id": "alignment-pattern",
+            "label": "Alignment Pattern",
+            "info": "Use ^ for top and - for below - An Example would be ^-^--"
+          }, {
+            "type": "range",
+            "id": "gap",
+            "label": "Letter Gap",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "default": 1,
+            "unit": "rem"
+          }
+        ]
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "Default",
+        "category": "Header"
+      }
+    ]
+  }
+{% endschema %}
+
+{% comment %} importing the section sticky-hero script {% endcomment %}
+<script src="{{ 'section_sticky-hero.js' | asset_url }}" defer></script>

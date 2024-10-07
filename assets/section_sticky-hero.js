@@ -22,7 +22,19 @@ class StickyHero extends HTMLElement {
       this.children[0].style.setProperty("--gap", this.gap);
     }
 
-    console.log("Sticky Hero Mounted");
+    this.animateIn();
+  }
+
+  animateIn() {
+    console.log(
+      "select all the child elements with the data attribute of 'data-animate"
+    );
+    const elements = this.querySelectorAll("[data-animate]");
+
+    gsap.to(this.querySelectorAll("[data-animate]"), {
+      autoAlpha: 1,
+      stagger: 0.1,
+    });
   }
 
   disconnectedCallback() {

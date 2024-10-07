@@ -28,7 +28,7 @@
                 {% assign alignment = 'align-middle' %}
             {% endcase %}
             <div class="sticky-hero__column {{alignment}}">
-              <span>
+              <span data-animate="{{section.settings.animation}}">
                 {{ word[0] }}
                 <sup>{{ remaining_chars }}</sup>
               </span>
@@ -80,6 +80,21 @@
           }, {
             "label": "XL",
             "value": "font-scale--xl"
+          }
+        ]
+      }, {
+        "type": "select",
+        "id": "animation",
+        "default": "fade-in",
+        "label": "Animation",
+        "info": "Animation style for the section",
+        "options": [
+          {
+            "label": "Fade In",
+            "value": "fade-in"
+          }, {
+            "label": "Slide In",
+            "value": "slide-in"
           }
         ]
       }

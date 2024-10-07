@@ -8,4 +8,4 @@ class SectionHeader extends HTMLElement {
   }
 }
 
-customElements.define("section-header", Header);
+customElements.define("section-header", SectionHeader);

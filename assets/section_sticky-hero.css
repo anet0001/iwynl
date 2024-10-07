@@ -31,6 +31,7 @@ sticky-hero .sticky-hero__column span {
   padding-top: calc(var(--r) * 2);
   top: 0;
   cursor: pointer;
+  visibility: hidden;
 }
 
 sticky-hero .sticky-hero__column:hover sup {

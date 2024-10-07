@@ -1,0 +1,14 @@
+.font-scale {
+}
+
+.font-scale--medium {
+  font-size: 40px;
+}
+
+.font-scale--large {
+  font-size: 60px;
+}
+
+.font-scale--xl {
+  font-size: calc(var(--r) * 30);
+}

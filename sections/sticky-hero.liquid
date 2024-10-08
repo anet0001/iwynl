@@ -36,7 +36,7 @@
                 <sup>{{ remaining_chars }}</sup>
 
                 <figure class="stick-hero__column-image">
-                  {{ current_block.settings.image | image_url: width: 300 | image_tag: height: nil }}
+                  {{ current_block.settings.image | image_url: width: 300 | image_tag: height: nil, draggable: false }}
                 </figure>
               </div>
             </div>

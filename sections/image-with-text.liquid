@@ -5,7 +5,7 @@
 <image-with-text data-animation="{{section.settings.animation}}">
   <figure class="image-with-text__image">
     {% if section.settings.image != blank %}
-      {{ section.settings.image | image_url: width: 500 | image_tag }}
+      {{ section.settings.image | image_url: width: 500 | image_tag: height: nil, draggable: false }}
     {% endif %}
   </figure>
   <div class="image-with-text__text">

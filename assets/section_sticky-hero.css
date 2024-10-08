@@ -36,7 +36,7 @@ sticky-hero .sticky-hero__item span {
 }
 
 @media (hover: hover) {
-  sticky-hero .sticky-hero__item span:hover ~ sup {
+  sticky-hero .sticky-hero__item span:hover ~ p {
     opacity: 1;
   }
 
@@ -45,7 +45,7 @@ sticky-hero .sticky-hero__item span {
   }
 }
 
-sticky-hero .sticky-hero__column sup {
+sticky-hero .sticky-hero__column p {
   position: absolute;
   bottom: 0;
   left: 50%;

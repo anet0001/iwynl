@@ -16,11 +16,13 @@ class StickyHero extends HTMLElement {
 
     this.animation = this.getAttribute("data-animation") || "fade-in";
 
+    this.animateIn();
+
     if (window.matchMedia("(hover: hover)").matches) {
       this.enableHoverEffects();
+    } else {
+      this.enableTouchEffects();
     }
-
-    this.animateIn();
   }
 
   enableHoverEffects() {
@@ -40,6 +42,25 @@ class StickyHero extends HTMLElement {
         if (image) image.style.opacity = 0;
       });
     });
+  }
+
+  enableTouchEffects() {
+    // const items = this.querySelectorAll(".sticky-hero__item");
+    // const totalItems = items.length;
+    // const showNextItem = () => {
+    //   items.forEach((item, index) => {
+    //     if (index === this.currentIndex) {
+    //       item.style.visibility = "visible";
+    //       item.style.opacity = 1;
+    //     } else {
+    //       item.style.visibility = "hidden";
+    //       item.style.opacity = 0;
+    //     }
+    //   });
+    //   this.currentIndex = (this.currentIndex + 1) % totalItems;
+    // };
+    // showNextItem();
+    // setInterval(showNextItem, 2000);
   }
 
   animateIn() {

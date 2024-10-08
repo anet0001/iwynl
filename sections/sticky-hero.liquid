@@ -17,7 +17,6 @@
           {% assign text_alignment = block.settings.alignment-pattern | split: '' %}
           {% for part in text_parts %}
             {% assign word = part | split: "" %}
-            {% assign remaining_chars = part %}
 
             {% assign alignment = '' %}
             {% case text_alignment[forloop.index0] %}
@@ -32,7 +31,7 @@
                 {% assign current_block = image_sequence[forloop.index0] %}
 
                 <span>{{ word[0] }}</span>
-                <sup>{{ remaining_chars }}</sup>
+                <p>{{ word | join: '' }}</p>
 
                 {% if current_block and current_block.settings.image %}
                   <figure class="stick-hero__column-image">

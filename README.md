@@ -4,25 +4,38 @@
 
 Minimal Shopify theme development for IWYNL (I Wish You Never Left) – a boutique store.
 
-Store is hosted at [IWYNL Shopify Store](https://iwynl.myshopify.com) and the password is `ACTTA`.
+The store is hosted at [IWYNL Shopify Store](https://iwynl.myshopify.com) and the password is `ACTTA`.
 
-First of my Building & Learning in public series.
+This is the first project in my _Building & Learning in Public_ series.
 
-## Dev Logs
+## Daily Dev Log
 
 ### Day 1
 
-- Designed the homepage layout (Designs and case study will be made available on Behance when the project is done).
-- Setup initial project structure on Github.
-- Added placeholders for Home, About, Collection, Gallery and Contact Pages
-- Setup dynamic fonts through theme settings
-- Added Sticky Hero Section
-- Added smooth scroll with lenis
-- Added Header (Toggle Section)
+#### Design & Structure
 
-### Project Checklist
+- Designed the homepage layout (designs and case study will be available on Behance once the project is completed).
+- Set up the initial project structure on GitHub.
+- Added placeholders for Home, About, Collection, Gallery, and Contact pages.
 
-This will be updated as the project grows
+#### Theme Settings & Functionality
+
+- Set up dynamic fonts through theme settings.
+- Added a sticky hero section.
+- Implemented smooth scroll using Lenis.
+- Added a header with a toggle section.
+
+### Day 2
+
+#### Section Enhancements
+
+- Added image-with-text sections.
+- Created layout variants for image-with-text sections.
+
+#### Responsiveness & Animations
+
+- Made the sticky hero section responsive.
+- Added image reveal animation on character hover within the sticky hero section.
 
 ## Contact
 

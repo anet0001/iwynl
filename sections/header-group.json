@@ -3,8 +3,24 @@
   "type": "header",
   "sections": {
     "header": {
-      "type": "header"
+      "type": "header",
+      "blocks": {
+        "menu_toggle_gRya6x": {
+          "type": "menu-toggle",
+          "settings": {
+            "menu-toggle--open": "Close Menu",
+            "menu-toggle--closed": "Open Menu"
+          }
+        }
+      },
+      "block_order": [
+        "menu_toggle_gRya6x"
+      ],
+      "settings": {
+      }
     }
   },
-  "order": ["header"]
+  "order": [
+    "header"
+  ]
 }

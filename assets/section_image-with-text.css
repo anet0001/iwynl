@@ -1,0 +1,39 @@
+image-with-text {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: calc(var(--r) * 2);
+  padding: calc(var(--r) * 2);
+  margin-top: calc(var(--r) * 25);
+}
+
+image-with-text .image-with-text__image {
+  grid-column: span 2;
+}
+
+image-with-text .image-with-text__image img {
+  width: 100%;
+}
+
+image-with-text .image-with-text__text {
+  grid-column: span 2;
+}
+
+image-with-text .image-with-text__text h2 {
+  font-size: calc(var(--r) * 2);
+  font-weight: var(--font-primary-weight);
+  margin-bottom: calc(var(--r) * 2.5);
+}
+
+image-with-text .image-with-text__text h2 sup {
+  font-size: 0.75em;
+  text-transform: lowercase;
+  vertical-align: top;
+}
+
+image-with-text .image-with-text__text p {
+  font-size: calc(var(--r) * 2);
+}
+
+image-with-text .image-with-text__text p + p {
+  margin-top: calc(var(--r) * 3);
+}

@@ -2,7 +2,6 @@ class StickyHero extends HTMLElement {
   constructor() {
     super();
     this.columns;
-    this.gap;
   }
 
   connectedCallback() {
@@ -12,14 +11,6 @@ class StickyHero extends HTMLElement {
 
     if (this.columns) {
       this.children[0].style.setProperty("--columns", this.columns);
-    }
-
-    this.gap = this.children
-      ? this.children[0].getAttribute("data-gap")
-      : "1rem";
-
-    if (this.gap) {
-      this.children[0].style.setProperty("--gap", this.gap);
     }
 
     this.animation = this.getAttribute("data-animation") || "fade-in";
@@ -34,7 +25,6 @@ class StickyHero extends HTMLElement {
         ease: "power2.out",
         stagger: {
           each: 0.1,
-          from: "random",
         },
       });
     } else {

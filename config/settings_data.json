@@ -1,1 +1,39 @@
-{}
+{
+  "current": {
+    "sections": {
+      "sticky-hero": {
+        "type": "sticky-hero",
+        "blocks": {
+          "hero_text_CBxMjy": {
+            "type": "hero-text",
+            "settings": {
+              "text": "I Wish You Never Left",
+              "alignment-pattern": "^-^--",
+              "gap": 1
+            }
+          }
+        },
+        "block_order": [
+          "hero_text_CBxMjy"
+        ],
+        "settings": {
+          "font": "primary",
+          "font-scale": "font-scale--xl",
+          "animation": "slide-in"
+        }
+      },
+      "image-with-text": {
+        "type": "image-with-text",
+        "settings": {
+          "heading": "About",
+          "text": "<p>Paragraph Content<\/p>",
+          "image": "shopify:\/\/shop_images\/placeholder--blue.png",
+          "animation": "fade-in"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

@@ -11,8 +11,7 @@
           class="sticky-hero__inner {{ section.settings.font-scale }}"
           data-block-id="hero-text"
           {{ block.shopify_attributes }}
-          data-columns="{{column_size}}"
-          data-gap="{{ block.settings.gap }}">
+          data-columns="{{column_size}}">
 
           {% assign text_parts = block.settings.text | split: ' ' %}
           {% assign text_alignment = block.settings.alignment-pattern | split: '' %}
@@ -28,10 +27,18 @@
                 {% assign alignment = 'align-middle' %}
             {% endcase %}
             <div class="sticky-hero__column {{alignment}}">
-              <span data-animate="{{section.settings.animation}}">
-                {{ word[0] }}
+              <div class="sticky-hero__item" data-animate="{{section.settings.animation}}">
+                {% assign image_sequence = section.blocks | where: "type", "image-sequence" %}
+                {% assign current_block = image_sequence[forloop.index0] %}
+
+                <span>
+                  {{ word[0] }}</span>
                 <sup>{{ remaining_chars }}</sup>
-              </span>
+
+                <figure class="stick-hero__column-image">
+                  {{ current_block.settings.image | image_url: width: 300 | image_tag: height: nil }}
+                </figure>
+              </div>
             </div>
           {% endfor %}
         </div>
@@ -116,15 +123,18 @@
             "label": "Alignment Pattern",
             "info": "Use ^ for top and - for below - An Example would be ^-^--",
             "default": "^-^--"
-          }, {
-            "type": "range",
-            "id": "gap",
-            "label": "Letter Gap",
-            "min": 1,
-            "max": 5,
-            "step": 1,
-            "default": 1,
-            "unit": "rem"
+          }
+        ]
+      }, {
+        "name": "Hero Image",
+        "type": "image-sequence",
+        "limit": 5,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "Hero Image"
           }
         ]
       }

@@ -3,16 +3,14 @@ sticky-hero {
   position: relative;
   height: 100dvh;
   width: 100%;
-  /* padding-bottom: 80rem; */
 }
 
 sticky-hero .sticky-hero__inner {
   --columns: 5;
-  --gap: 1;
   display: grid;
   height: 100%;
   grid-template-columns: repeat(var(--columns), 1fr);
-  gap: calc(1rem * var(--gap));
+  gap: calc(var(--r) * 2);
   position: relative;
 }
 
@@ -25,16 +23,23 @@ sticky-hero .sticky-hero__column {
   align-items: center;
 }
 
-sticky-hero .sticky-hero__column span {
+sticky-hero .sticky-hero__item {
   display: block;
   position: sticky;
   padding-top: calc(var(--r) * 2);
   top: 0;
-  cursor: pointer;
   visibility: hidden;
 }
 
-sticky-hero .sticky-hero__column span:hover sup {
+sticky-hero .sticky-hero__item span {
+  cursor: pointer;
+}
+
+sticky-hero .sticky-hero__item span:hover ~ sup {
+  opacity: 1;
+}
+
+sticky-hero .sticky-hero__item span:hover ~ .stick-hero__column-image {
   opacity: 1;
 }
 
@@ -48,10 +53,35 @@ sticky-hero .sticky-hero__column sup {
   transition: opacity 0.3s ease-in-out;
 }
 
-sticky-hero .sticky-hero__column.align-middle span {
+sticky-hero .stick-hero__column-image {
+  aspect-ratio: 4/5;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+sticky-hero .sticky-hero__column.align-middle .sticky-hero__item {
   margin-top: 100%;
 }
 
-sticky-hero .sticky-hero__column.align-top span {
+sticky-hero
+  .sticky-hero__column.align-middle
+  .sticky-hero__item
+  .stick-hero__column-image {
+  transform: translateY(calc(-100% - (var(--r) * 4))) translateX(-50%);
+}
+
+sticky-hero
+  .sticky-hero__column.align-top
+  .sticky-hero__item
+  .stick-hero__column-image {
+  transform: translateY(calc(100% + (var(--r) * 4))) translateX(-50%);
+}
+
+sticky-hero .sticky-hero__column.align-top .sticky-hero__item {
   margin-top: -100%;
 }

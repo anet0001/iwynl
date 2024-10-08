@@ -25,7 +25,7 @@
     "class": "image-with-text",
     "tag": "article",
     "disabled_on": {
-      "groups": ["header"]
+      "groups": ["header"],
     },
     "settings": [
       {
@@ -50,6 +50,21 @@
         "type": "text",
         "id": "image-alt",
         "label": "Image Alt Text"
+      }, {
+        "type": "select",
+        "id": "image-alignment",
+        "default": "image--left",
+        "label": "Image Alignment",
+        "info": "Alignment position for the image",
+        "options": [
+          {
+            "label": "Image Left",
+            "value": "image--left"
+          }, {
+            "label": "Image Right",
+            "value": "image--right"
+          }
+        ]
       }, {
         "type": "select",
         "id": "animation",

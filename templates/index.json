@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "sticky-hero": {
+      "type": "sticky-hero"
+    },
+    "image-with-text": {
+      "type": "image-with-text"
+    }
+  },
+  "order": ["sticky-hero", "image-with-text"]
+}

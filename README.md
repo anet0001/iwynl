@@ -31,10 +31,10 @@ This is the first project in my _Building & Learning in Public_ series.
 
 - Added image-with-text sections.
 - Created layout variants for image-with-text sections.
+- Implemented toggle functionality on navigation header
 
-#### Responsiveness & Animations
+#### Animations
 
-- Made the sticky hero section responsive.
 - Added image reveal animation on character hover within the sticky hero section.
 
 ## Contact

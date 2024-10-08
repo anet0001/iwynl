@@ -13,9 +13,14 @@
           }
         }
       },
-      "block_order": ["menu_toggle_gRya6x"],
-      "settings": {}
+      "block_order": [
+        "menu_toggle_gRya6x"
+      ],
+      "settings": {
+      }
     }
   },
-  "order": ["header"]
+  "order": [
+    "header"
+  ]
 }

@@ -35,12 +35,14 @@ sticky-hero .sticky-hero__item span {
   cursor: pointer;
 }
 
-sticky-hero .sticky-hero__item span:hover ~ sup {
-  opacity: 1;
-}
+@media (hover: hover) {
+  sticky-hero .sticky-hero__item span:hover ~ sup {
+    opacity: 1;
+  }
 
-sticky-hero .sticky-hero__item span:hover ~ .stick-hero__column-image {
-  opacity: 1;
+  sticky-hero .sticky-hero__item span:hover ~ .stick-hero__column-image {
+    opacity: 1;
+  }
 }
 
 sticky-hero .sticky-hero__column sup {

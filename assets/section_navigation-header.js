@@ -36,4 +36,6 @@ class NavigationHeader extends HTMLElement {
   }
 }
 
-customElements.define("navigation-header", NavigationHeader);
+if (!customElements.get("navigation-header")) {
+  customElements.define("navigation-header", NavigationHeader);
+}

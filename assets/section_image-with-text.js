@@ -5,4 +5,6 @@ class ImageWithText extends HTMLElement {
   }
 }
 
-customElements.define("image-with-text", ImageWithText);
+if (!customElements.get("image-with-text")) {
+  customElements.define("image-with-text", ImageWithText);
+}

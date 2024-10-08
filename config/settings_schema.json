@@ -39,6 +39,13 @@
         "label": "Primary Color",
         "info": "The primary color of the website",
         "default": "#2D2D2D"
+      },
+      {
+        "type": "color",
+        "id": "brand_color",
+        "label": "Brand Color",
+        "info": "The brand color of the website",
+        "default": "#002147"
       }
     ]
   }

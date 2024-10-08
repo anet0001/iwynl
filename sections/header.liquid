@@ -1,16 +1,17 @@
 {% comment %} WIS?: The navigation header component (section) {% endcomment %}
 
-{{ 'layout_header.css' | asset_url | stylesheet_tag }}
+{{ 'layout_navigation-header.css' | asset_url | stylesheet_tag }}
 
 {% if section.blocks.size > 0 %}
-  <section-header>
+  <navigation-header>
     {% for block in section.blocks %}
       {% if block.type == "menu-toggle" %}
 				{% assign toggle_text = block.settings.menu-toggle--closed | split: " " %}
-        <button {{block.shopify_attributes}} class="menu-toggle"><span><sup>{{ toggle_text.first }}</sup>{{ toggle_text.last }}</span></button>
+        <button {{block.shopify_attributes}} class="menu-toggle" data-close-text="{{block.settings.menu-toggle--open}}" data-open-text="{{block.settings.menu-toggle--closed}}"><span><sup>{{ toggle_text.first }}</sup>{{ toggle_text.last }}</span></button>
       {% endif %}
     {% endfor %}
-  </section-header>
+		{% render "menu" %}
+  </navigation-header>
 {% endif %}
 
 {% schema %}
@@ -50,4 +51,4 @@
   }
 {% endschema %}
 
-<script src="{{ 'section_header.js' | asset_url }}" defer></script>
+<script src="{{ 'section_navigation-header.js' | asset_url }}" defer></script>

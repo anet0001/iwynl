@@ -8,13 +8,47 @@
             "type": "hero-text",
             "settings": {
               "text": "I Wish You Never Left",
-              "alignment-pattern": "^-^--",
-              "gap": 1
+              "alignment-pattern": "^-^--"
+            }
+          },
+          "image_sequence_wnyriJ": {
+            "type": "image-sequence",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/placeholder--blue.png"
+            }
+          },
+          "image_sequence_mEYM3q": {
+            "type": "image-sequence",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/placeholder--blue.png"
+            }
+          },
+          "image_sequence_FGJ44z": {
+            "type": "image-sequence",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/placeholder--blue.png"
+            }
+          },
+          "image_sequence_dxDLHQ": {
+            "type": "image-sequence",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/placeholder--blue.png"
+            }
+          },
+          "image_sequence_eVFitM": {
+            "type": "image-sequence",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/placeholder--blue.png"
             }
           }
         },
         "block_order": [
-          "hero_text_CBxMjy"
+          "hero_text_CBxMjy",
+          "image_sequence_wnyriJ",
+          "image_sequence_mEYM3q",
+          "image_sequence_FGJ44z",
+          "image_sequence_dxDLHQ",
+          "image_sequence_eVFitM"
         ],
         "settings": {
           "font": "primary",
@@ -26,8 +60,9 @@
         "type": "image-with-text",
         "settings": {
           "heading": "About",
-          "text": "<p>Paragraph Content<\/p>",
+          "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
           "image": "shopify:\/\/shop_images\/placeholder--blue.png",
+          "image-alt": "",
           "animation": "fade-in"
         }
       }

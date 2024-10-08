@@ -31,13 +31,14 @@
                 {% assign image_sequence = section.blocks | where: "type", "image-sequence" %}
                 {% assign current_block = image_sequence[forloop.index0] %}
 
-                <span>
-                  {{ word[0] }}</span>
+                <span>{{ word[0] }}</span>
                 <sup>{{ remaining_chars }}</sup>
 
-                <figure class="stick-hero__column-image">
-                  {{ current_block.settings.image | image_url: width: 300 | image_tag: height: nil, draggable: false }}
-                </figure>
+                {% if current_block and current_block.settings.image %}
+                  <figure class="stick-hero__column-image">
+                    {{ current_block.settings.image | image_url: width: 300 | image_tag: height: nil, draggable: false }}
+                  </figure>
+                {% endif %}
               </div>
             </div>
           {% endfor %}

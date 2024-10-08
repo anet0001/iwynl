@@ -3,7 +3,7 @@ image-with-text {
   grid-template-columns: repeat(5, 1fr);
   gap: calc(var(--r) * 2);
   padding: calc(var(--r) * 2);
-  margin-top: calc(var(--r) * 25);
+  margin-top: calc(var(--r) * 37);
 }
 
 image-with-text .image-with-text__image {

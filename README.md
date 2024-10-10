@@ -30,12 +30,18 @@ This is the first project in my _Building & Learning in Public_ series.
 #### Section Enhancements
 
 - Added image-with-text sections.
-- Created layout variants for image-with-text sections.
 - Implemented toggle functionality on navigation header
 
 #### Animations
 
 - Added image reveal animation on character hover within the sticky hero section.
+
+### Day 3
+
+#### Section Enhancements
+
+- Converted index.liquid to JSON template
+- Created layout variants for image-with-text sections.
 
 ## Contact
 

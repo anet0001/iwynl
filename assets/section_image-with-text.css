@@ -7,7 +7,11 @@ image-with-text {
 }
 
 image-with-text .image-with-text__image {
-  grid-column: span 2;
+  grid-column: span 1;
+}
+
+image-with-text.image-with-text--image-right .image-with-text__image {
+  grid-column: 5 / 6;
 }
 
 image-with-text .image-with-text__image img {
@@ -15,7 +19,17 @@ image-with-text .image-with-text__image img {
 }
 
 image-with-text .image-with-text__text {
-  grid-column: span 2;
+  position: relative;
+  bottom: calc(var(--r) * -5.5);
+  align-self: end;
+  grid-column: 3 / 5;
+}
+
+image-with-text.image-with-text--image-right .image-with-text__text {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  align-self: start;
+  bottom: 0;
 }
 
 image-with-text .image-with-text__text h2 {

@@ -47,12 +47,17 @@ sticky-hero .sticky-hero__item span {
 
 sticky-hero .sticky-hero__column p {
   position: absolute;
-  bottom: 0;
+  bottom: calc(var(--r) * -2);
   left: 50%;
   transform: translateX(-50%);
   font-size: calc(var(--r) * 2);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  background-color: var(--color-brand);
+  padding: calc(var(--r) * 1) calc(var(--r) * 1.75);
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border-radius: 35px;
 }
 
 sticky-hero .stick-hero__column-image {

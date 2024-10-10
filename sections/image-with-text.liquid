@@ -2,7 +2,7 @@
 
 {{ 'section_image-with-text.css' | asset_url | stylesheet_tag }}
 
-<image-with-text data-animation="{{section.settings.animation}}">
+<image-with-text class="image-with-text--{{section.settings.image-alignment}}" data-animation="{{section.settings.animation}}">
   <figure class="image-with-text__image">
     {% if section.settings.image != blank %}
       {{ section.settings.image | image_url: width: 500 | image_tag: height: nil, draggable: false }}
@@ -53,16 +53,16 @@
       }, {
         "type": "select",
         "id": "image-alignment",
-        "default": "image--left",
+        "default": "image-left",
         "label": "Image Alignment",
         "info": "Alignment position for the image",
         "options": [
           {
             "label": "Image Left",
-            "value": "image--left"
+            "value": "image-left"
           }, {
             "label": "Image Right",
-            "value": "image--right"
+            "value": "image-right"
           }
         ]
       }, {

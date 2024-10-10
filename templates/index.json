@@ -13,31 +13,31 @@
         "image_sequence_J6bwbb": {
           "type": "image-sequence",
           "settings": {
-            "image": "shopify://shop_images/placeholder--blue.png"
+            "image": "shopify:\/\/shop_images\/placeholder--blue.png"
           }
         },
         "image_sequence_97XBAp": {
           "type": "image-sequence",
           "settings": {
-            "image": "shopify://shop_images/placeholder--blue.png"
+            "image": "shopify:\/\/shop_images\/placeholder--blue.png"
           }
         },
         "image_sequence_VDL6jM": {
           "type": "image-sequence",
           "settings": {
-            "image": "shopify://shop_images/placeholder--blue.png"
+            "image": "shopify:\/\/shop_images\/placeholder--blue.png"
           }
         },
         "image_sequence_d9xzRC": {
           "type": "image-sequence",
           "settings": {
-            "image": "shopify://shop_images/placeholder--blue.png"
+            "image": "shopify:\/\/shop_images\/placeholder--blue.png"
           }
         },
         "image_sequence_nY3n7F": {
           "type": "image-sequence",
           "settings": {
-            "image": "shopify://shop_images/placeholder--blue.png"
+            "image": "shopify:\/\/shop_images\/placeholder--blue.png"
           }
         }
       },
@@ -59,10 +59,10 @@
       "type": "image-with-text",
       "settings": {
         "heading": "About",
-        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
-        "image": "shopify://shop_images/placeholder--blue.png",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+        "image": "shopify:\/\/shop_images\/placeholder--blue.png",
         "image-alt": "",
-        "image-alignment": "image--left",
+        "image-alignment": "image-left",
         "animation": "fade-in"
       }
     },
@@ -70,13 +70,17 @@
       "type": "image-with-text",
       "settings": {
         "heading": "Our Process",
-        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>",
-        "image": "shopify://shop_images/placeholder--blue.png",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.<\/p>",
+        "image": "shopify:\/\/shop_images\/placeholder--blue.png",
         "image-alt": "",
         "image-alignment": "image--right",
         "animation": "fade-in"
       }
     }
   },
-  "order": ["sticky-hero", "image-with-text", "image_with_text_GENwDq"]
+  "order": [
+    "sticky-hero",
+    "image-with-text",
+    "image_with_text_GENwDq"
+  ]
 }
